@@ -1,0 +1,75 @@
+@import url('https://rsms.me/inter/inter.css');
+
+        /* :root {
+            --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+        } */
+
+        body {
+            font-family: "Poppins", sans-serif !important;
+            /* font-feature-settings: "cv03", "cv04", "cv11"; */
+        }
+
+        /* .card {
+            border-radius: 12px !important;
+        } */
+
+        /* .btn {
+            border-radius: 15px !important;
+        } */
+
+        .table thead th {
+            color: #6c7a91 !important;
+        }
+
+        /* input {
+            border-radius: 16px !important;
+        }
+
+        select {
+            border-radius: 16px !important;
+        }
+
+        textarea {
+            border-radius: 16px !important;
+        }
+
+        @keyframes shining {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        } */
+
+        /* .shining-icon {
+            color: #fff;
+            font-size: 20px;
+            animation: first_color .5s ease-in-out infinite alternate;
+        }
+
+        .shining-icon {
+            animation: shining 2s infinite;
+        }
+
+        .shining-icon {
+            animation-name: third_color;
+        }
+
+        @keyframes third_color {
+            0% {
+                text-shadow: 0 0 10px #e9dc50, 0 0 20px #e9dc50, 0 0 30px #e9dc50;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #e9dc50, 0 0 15px #e9dc50, 0 0 25px #e9dc50;
+            }
+        } */
