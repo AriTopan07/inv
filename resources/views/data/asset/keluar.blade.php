@@ -36,7 +36,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary fw-bold" onclick="return confirm()">Submit</button>
+                    <button type="button" class="btn btn-primary fw-bold"
+                        onclick="return confirmMutasi()">Submit</button>
                 </div>
             </form>
         </div>
@@ -44,7 +45,7 @@
 </div>
 
 <script>
-    function confirm() {
+    function confirmMutasi() {
         Swal.fire({
             title: 'Simpan barang keluar ?',
             text: 'Anda yakin ingin menyimpan data barang keluar ?',

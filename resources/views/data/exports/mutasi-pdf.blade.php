@@ -10,7 +10,7 @@
     </tr>
 </table>
 <br>
-<table border="1">
+<table>
     <thead>
         <tr>
             <th style="text-align: center; background-color: #40c668;"><b>No</b></th>

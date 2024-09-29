@@ -24,6 +24,7 @@
             <th style="text-align: center; background-color: #40c668;"><b>Jumlah</b></th>
             <th style="text-align: center; background-color: #40c668;"><b>Kondisi</b></th>
             <th style="text-align: center; background-color: #40c668;"><b>Deskripsi</b></th>
+            <th style="text-align: center; background-color: #40c668;"><b>Dibuat Oleh</b></th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +41,7 @@
                 <td>{{ $item->qty }}</td>
                 <td>{{ $item->kondisi }}</td>
                 <td>{{ $item->deskripsi }}</td>
+                <td>{{ $item->nama_user }}</td>
             </tr>
         @endforeach
     </tbody>

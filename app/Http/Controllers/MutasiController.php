@@ -91,8 +91,8 @@ class MutasiController extends Controller
     public function terima(Request $request, $id)
     {
         try {
-            $barang = Barang::find($id);
             $mutasi = Mutasi::find($id);
+            $barang = Barang::find($mutasi->barang_id);
 
             $mutasi->verified = 1;
             $mutasi->save();

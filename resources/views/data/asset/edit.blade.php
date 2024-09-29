@@ -22,6 +22,7 @@
         <!-- Page body -->
         <div class="page-body">
             <div class="container-xl">
+                <button onclick="window.history.back()" class="btn btn-secondary mb-3">Kembali</button>
                 <div class="row row-deck row-cards">
                     <div class="col-sm-12">
                         <div class="card card-borderless shadow-sm">

@@ -20,19 +20,23 @@
                     <div class="col-12">
                         <div class="row row-cards">
                             @foreach ($data as $item)
-                                <div class="col-md-3 col-lg-2 col-sm-3 col-4">
-                                    <div class="card card-borderless bg-primary text-green-fg">
-                                        <div class="card-stamp">
-                                            <div class="card-stamp-icon bg-white text-primary">
-                                                <i class="bi bi-calendar"></i>
+                                <div class="col-md-3 col-lg-3 col-sm-3 col-4">
+                                    <a href="{{ route('inventaris.ruangan', ['id' => $item->idr]) }}"
+                                        class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right"
+                                        title="Klik untuk melihat">
+                                        <div class="card card-borderless bg-primary text-green-fg">
+                                            <div class="card-stamp">
+                                                <div class="card-stamp-icon bg-white text-primary">
+                                                    <i class="bi bi-calendar"></i>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title text-center">{{ $item->nama_ruangan }}</h3>
+                                                <h5 class="fw-normal text-center">Jumlah barang : {{ $item->jumlah_barang }}
+                                                </h5>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <h3 class="card-title text-center">{{ $item->nama_ruangan }}</h3>
-                                            <h5 class="fw-normal text-center">Jumlah barang : {{ $item->jumlah_barang }}
-                                            </h5>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             @endforeach
                         </div>

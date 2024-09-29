@@ -83,8 +83,8 @@ class BarangKeluarController extends Controller
     public function terima(Request $request, $id)
     {
         try {
-            $barang = Barang::find($id);
             $barangKeluar = BarangKeluar::find($id);
+            $barang = Barang::find($barangKeluar->barang_id);
 
             $barangKeluar->verified = 1;
             $barangKeluar->save();

@@ -131,4 +131,5 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
     Route::get('/laporan-excel/{type}/{date_start}/{date_end}', [LaporanController::class, 'download_excel'])->name('laporan.excel');
+    Route::get('/laporan-pdf/{type}/{date_start}/{date_end}', [LaporanController::class, 'download_pdf'])->name('laporan.pdf');
 });

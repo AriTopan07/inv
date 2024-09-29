@@ -26,7 +26,7 @@
                     <div class="col-12">
                         <div class="row row-cards">
                             @foreach ($data['ruangan'] as $item)
-                                <div class="col-md-3 col-lg-2 col-sm-3 col-4">
+                                <div class="col-md-3 col-lg-3 col-sm-3 col-4">
                                     <a href="{{ route('inventaris.ruangan', ['id' => $item->id]) }}"
                                         class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right"
                                         title="Klik untuk melihat">

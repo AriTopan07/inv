@@ -27,9 +27,9 @@ class GroupController extends Controller
 
     public function index()
     {
-        if ($this->permission->cekAkses(Auth::user()->id, "Group", "view") !== true) {
-            return view('error.403');
-        }
+        // if ($this->permission->cekAkses(Auth::user()->id, "Group", "view") !== true) {
+        //     return view('error.403');
+        // }
 
         $data = $this->group->group();
 

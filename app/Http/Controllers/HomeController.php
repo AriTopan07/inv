@@ -20,12 +20,13 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data = Ruangan::select('ruangans.nama as nama_ruangan')
+        $data = Ruangan::select('ruangans.nama as nama_ruangan', 'ruangans.id as idr')
             ->leftJoin('barangs', 'ruangans.id', '=', 'barangs.ruangan_id')
-            ->selectRaw('COUNT(barangs.id) as jumlah_barang')
+            ->selectRaw('COUNT(CASE WHEN barangs.status = 1 THEN 1 END) as jumlah_barang')
             ->groupBy('ruangans.id', 'ruangans.nama')
             ->get();
 
+        // dd($data);
         return view('home', compact('data'));
     }
 }

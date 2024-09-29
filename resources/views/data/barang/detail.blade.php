@@ -22,6 +22,7 @@
         <!-- Page body -->
         <div class="page-body">
             <div class="container-xl">
+                <button onclick="window.history.back()" class="btn btn-secondary mb-3">Kembali</button>
                 <div class="row row-deck row-cards">
                     <div class="col-sm-12">
                         <div class="card card-borderless shadow-sm table-responsive">
@@ -46,7 +47,11 @@
                                     <div class="col-md-2">
                                         <table class="table-responsive mt-3">
                                             <tr>
-                                                <td>{!! DNS2D::getBarcodeHTML('$ ' . $data['barang']->barcode, 'QRCODE', 6, 6) !!}</td>
+                                                {{-- <td>{!! DNS2D::getBarcodeHTML('$ ' . $data['barang']->barcode, 'QRCODE', 6, 6) !!}</td> --}}
+                                                <td>
+                                                    <img src="{{ asset('uploads/barang/' . $data['barang']->image) }}"
+                                                        alt="image">
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>

@@ -64,6 +64,9 @@
                                                 <button class="btn btn-success" onclick="export_excel('barang_masuk')">
                                                     Download Excel
                                                 </button>
+                                                <button class="btn btn-danger" onclick="export_pdf('barang_masuk')">
+                                                    Download PDF
+                                                </button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -73,6 +76,9 @@
                                                 <button class="btn btn-success" onclick="export_excel('barang_keluar')">
                                                     Download Excel
                                                 </button>
+                                                <button class="btn btn-danger" onclick="export_pdf('barang_keluar')">
+                                                    Download PDF
+                                                </button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -81,6 +87,9 @@
                                             <td>
                                                 <button class="btn btn-success" onclick="export_excel('mutasi_barang')">
                                                     Download Excel
+                                                </button>
+                                                <button class="btn btn-danger" onclick="export_pdf('mutasi_barang')">
+                                                    Download PDF
                                                 </button>
                                             </td>
                                         </tr>
@@ -124,6 +133,42 @@
                 url = "{{ route('laporan.excel', ['keluar', ':date_start', ':date_end']) }}";
             } else if (params === 'mutasi_barang') {
                 url = "{{ route('laporan.excel', ['mutasi', ':date_start', ':date_end']) }}";
+            }
+
+            url = url.replace(':date_start', date_start);
+            url = url.replace(':date_end', date_end);
+
+            window.open(url);
+            console.log(url);
+        }
+
+        function export_pdf(params) {
+            let date_start = $('#date_start').val();
+            let date_end = $('#date_end').val();
+
+            if (date_start == null || date_start == "") {
+                Toast.fire({
+                    icon: 'warning',
+                    title: 'Tanggal awal belum diisi!'
+                })
+                return;
+            }
+            if (date_end == null || date_end == "") {
+                Toast.fire({
+                    icon: 'warning',
+                    title: 'Tanggal akhir belum diisi!'
+                })
+                return;
+            }
+
+            let url;
+
+            if (params === 'barang_masuk') {
+                url = "{{ route('laporan.pdf', ['masuk', ':date_start', ':date_end']) }}";
+            } else if (params === 'barang_keluar') {
+                url = "{{ route('laporan.pdf', ['keluar', ':date_start', ':date_end']) }}";
+            } else if (params === 'mutasi_barang') {
+                url = "{{ route('laporan.pdf', ['mutasi', ':date_start', ':date_end']) }}";
             }
 
             url = url.replace(':date_start', date_start);
